@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const readline = require("node:readline").createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+readline.question(`starting value: `, (start) => {
+  // console.log(`Hi ${name}!`);
+  readline.question(`ending value: `, (end) => {
+    readline.question(`total height: `, (height) => {
+      readline.question(`measurement to good PA: `, (current) => {
+        console.log(`PA Value:`, (current / height) * (end - start) + start);
+        readline.close();
+      });
+      // readline.close();
+    });
+    // readline.close();
+  });
+  // readline.close();
+});
